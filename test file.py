@@ -1,12 +1,14 @@
+import time
+
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome()
-
 driver.get("https://rahulshettyacademy.com/angularpractice/")
-driver.find_element_by_id('ctl00_cphMain_blkLogin_btnGuestLogin').click()
-driver.find_element_by_id('ctl00_cphMain_SrchNames1_txtFirmSurName').send_keys("Adam")
-datefield = driver.find_element_by_id('ctl00_cphMain_SrchDates1_txtFiledFrom')
-ActionChains(driver).move_to_element(datefield).click().send_keys('01012011').perform()
-search_btn = driver.find_element_by_id('ctl00_cphMain_btnSearchAll')
-ActionChains(driver).move_to_element(search_btn).click().click().perform()
+driver.find_element(By.NAME, "name").send_keys("ranvir")  #id, classname, name, cssselector, xpath, linktext
+#xpath = //tagname[@attribute='value']
+#cssselector = tagname[attribute ='value'] or #id or .classname
+driver.find_element(By.XPATH,"(//input[@type='text'])[2]").send_keys("ranvir@gmail.com")
+driver.find_element(By.XPATH,"//input[@name='bday']").send_keys('30081986')
+time.sleep(5)
