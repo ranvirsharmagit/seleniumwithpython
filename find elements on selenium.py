@@ -6,8 +6,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome()
 driver.get("https://rahulshettyacademy.com/angularpractice/")
-driver.find_element(By.NAME, "name").send_keys("ranvir")  #id, classname, name, cssselector, xpath, linktext
+driver.find_element(By.NAME, "name").send_keys("ranvir")
+#id, classname, name, cssselector, xpath, linktext
+
 #xpath = //tagname[@attribute='value']
+
 #cssselector = tagname[attribute ='value'] or #id or .classname
 driver.find_element(By.XPATH,"(//input[@type='text'])[2]").send_keys("ranvir@gmail.com")
 
