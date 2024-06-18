@@ -22,6 +22,6 @@ for country in count:             #this program to search all option available a
 #print(driver.find_element(By.ID,"autosuggest").text) #use when first time without any change you need to check but if page is refreshed then nothing print
 print(driver.find_element(By.ID,"autosuggest").get_attribute("value")) #to record and print the valuewhich is entered after select from the list
 
-assert driver.find_element(By.ID,"autosuggest").get_attribute("value") == "India" # to check "India" is appear on field or Not
+assert driver.find_element(By.ID,"autosuggest").get_attribute("value") == "India" # "assert" to check "India" is appear on field or Not
 
 
