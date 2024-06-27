@@ -28,6 +28,15 @@ driver.find_element(By.ID,"hide-textbox").click() #by this we click on the hide 
 assert not driver.find_element(By.ID,"displayed-text").is_displayed() # by this we can check that is not displayed by "assert not"
 
 
+name = "ranvir"
+driver.find_element(By.CSS_SELECTOR,"#name").send_keys(name)
+
+driver.find_element(By.ID,"alertbtn").click()
+alert = driver.switch_to.alert  #to inform about the popup alert
+alerttexxt = alert.text
+print(alerttexxt) # to print the allert popup text
+alert.accept() #to click OK
+assert name in alerttexxt #to check alert name variable is in popup or not
 
 
 
