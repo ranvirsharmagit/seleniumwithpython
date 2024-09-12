@@ -35,8 +35,9 @@ driver.find_element(By.ID,"alertbtn").click()
 alert = driver.switch_to.alert  #to inform about the popup alert
 alerttexxt = alert.text
 print(alerttexxt) # to print the allert popup text
-alert.accept() #to click OK
+
 assert name in alerttexxt #to check alert name variable is in popup or not
+alert.accept() #to click OK
 
 
 

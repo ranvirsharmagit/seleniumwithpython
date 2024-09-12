@@ -19,7 +19,7 @@ ActionChains(driver).move_to_element(datefield).click().send_keys('30081986').pe
 #search_btn = driver.find_element_by_id('ctl00_cphMain_btnSearchAll')
 #ActionChains(driver).move_to_element(search_btn).click().click().perform()
 
-#driver.find_element(By.XPATH,"//input[@name='bday']").is_selected(30/08/1986) issue with select date
+#driver.find_element(By.XPATH,"//input[@name='bday']").is_selected(30/08/1986) #issue with select date
 driver.find_element(By.XPATH,"(//input[@type='text'])[3]").send_keys("ranvir")
 driver.find_element(By.XPATH,"//input[@type='submit']").click()
 #driver.find_element(By.XPATH,"(//input[@type='text'])[3]").clear() #add index number in the end of xpth if there multipule elemnt available with same
